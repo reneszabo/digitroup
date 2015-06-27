@@ -1,5 +1,54 @@
 {% extends 'base.html.twig' %}
+{% block stylesheets %}
+  {{ parent() }}
+  <style type=text/css>
 
+    #home{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .section-video{
+      height: 1000px;
+    }
+    .video-overlay {
+      background: url(/img/dot.png) rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 34;
+      opacity: 0.7;
+    }
+  </style>
+{% endblock stylesheets %}
 {% block body %}
-  Homepage.
-{% endblock %}
+  {{ include('FrontendBundle:Default:header.html.twig') }}
+  <section id="home" >
+    <video class="section-video" poster="/img/logo_digitroup.png" autoplay="" loop="" preload="none" src="/video/video.mp4" >
+      <!-- MP4 source must come first for iOS -->
+      <source type="video/mp4" src="/video/video.mp4">
+      <!-- Fallback flash player for no-HTML5 browsers with JavaScript turned off -->
+      <div class="fluid-width-video-wrapper">
+        <object type="application/x-shockwave-flash" data="images/video/flashmediaelement.swf" id="fitvid982727"> 		
+          <param name="movie" value="images/video/flashmediaelement.swf"> 
+          <param name="flashvars" value="controls=false&amp;file=/video/video.mp4"> 		
+          <!-- Image fall back for non-HTML5 browser with JavaScript turned off and no Flash player installed -->
+          <img src="/img/logo_digitroup.png" alt="No Video Image" title="No video playback capabilities">
+        </object>
+      </div> 	
+    </video>
+    <div class="video-overlay"></div>
+  </section>
+{% endblock body %}
+{% block javascripts %}
+  {{ parent() }}
+  <script type="text/javascript">
+    $(document).on('ready', function () {
+      $("video").prop('muted', true); //mute
+    });
+
+  </script>
+{% endblock javascripts %}

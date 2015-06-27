@@ -1,10 +1,39 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
     Created on : 26-Jun-2015, 11:20:10 PM
     Author     : Rene Roberto Ramirez Szabo <rene.szabo@gmail.com>
 */
-
+html,body{
+  height: 100%;
+}
+body > header {
+  .digitroup-navbar-default{
+    background: rgba(0,0,0,0.1);
+    border:none;
+  }
+  .navbar-header{
+    .navbar-toggle {
+      margin-top: 45px; //TO 10
+      border: none;
+    }
+    .navbar-brand {
+      height: 110px; // 80
+      padding-top: 6px;
+      padding-bottom: 6px;
+      img{
+        height: 100%;
+      }
+    }
+  }
+  #digitroup-menu{
+    margin-top: 30px;
+    a {
+      color: white;
+      margin-left: 10px;
+      border: 1px transparent solid;
+      &:hover{
+        border: 1px white solid;
+        border-radius: 5px;
+      }
+    }
+  }
+}
