@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+  <head>
+    {{ include('meta.html.twig') }}
+    <title>{% block title %}{% endblock %}Digitroup</title>
+    {% block fonts %}
+      <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    {% endblock %}
+    {% block stylesheets %}
+      {{ include('css.html.twig') }}
+    {% endblock %}
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+  {% block body %}{% endblock %}
+  {% block javascripts %}
+    {{ include('javascripts.html.twig') }}
+    {{ include('analytics.html.twig') }}
+  {% endblock %}
+</body>
+</html> 
