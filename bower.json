@@ -1,0 +1,35 @@
+{
+  "name": "digitroup",
+  "version": "0.0.1",
+  "homepage": "https://github.com/reneszabo/digitroup",
+  "authors": [
+    "Rene Ramirez <rene.ramirez@verlas.com.ve>"
+  ],
+  "description": "digitroup bower file",
+  "keywords": [
+    "digitroup"
+  ],
+  "directory": "web/libs/",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "source",
+    "spec",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.3",
+    "bootstrap-sass": "~3.3.5"
+  }
+}
