@@ -113,7 +113,7 @@
   <section id="services">
     <div class="container">
       <div class="text-center">
-        <h1 class="digitroup-h1-pacifico digitroup-title digitroup-font-color-primary">Services</h1>
+        <h1 class="digitroup-h1-pacifico digitroup-title digitroup-font-color-primary digitroup-font-shadow">Services</h1>
         <p class="digitroup-subtitle">Profesional Solutions</p>
       </div>
 
@@ -149,7 +149,7 @@
   </section>
   <section id="team" class="digitroup-bg-gray">
     <div class="text-center">
-      <h1 class="digitroup-h1-pacifico digitroup-title digitroup-font-color-primary">Our Team</h1>
+      <h1 class="digitroup-h1-pacifico digitroup-title digitroup-font-color-primary digitroup-font-shadow">Our Team</h1>
       <p class="digitroup-subtitle">We Are Awesome</p>
     </div>
     <div class="container">
@@ -205,13 +205,24 @@
 
   </section>
   <section id="portfolio">
+    <div class="text-center">
+      <h1 class="digitroup-h1-pacifico digitroup-title digitroup-font-color-primary digitroup-font-shadow">Our Portfolio</h1>
+      <p class="digitroup-subtitle">Getting bigger and bigger</p>
+    </div>
 
   </section>
   <section id="skills" class="digitroup-bg-gray">
-
+    <div class="text-center">
+      <h1 class="digitroup-h1-pacifico digitroup-title digitroup-font-color-primary digitroup-font-shadow">Our Skills</h1>
+      <p class="digitroup-subtitle">Growing in every project</p>
+    </div>
   </section>
   <section id="contactus">
-
+    <div class="text-center">
+      <h1 class="digitroup-h1-pacifico digitroup-title digitroup-font-color-primary digitroup-font-shadow">Contact Us</h1>
+      <p class="digitroup-subtitle">Questions or Comments</p>
+      <p class="digitroup-subtitle">Get in touch with us!</p>
+    </div>
   </section>
 {% endblock body %}
 {% block javascripts %}
@@ -232,7 +243,7 @@
           $('#digitroup-menu li:nth-child(' + ($(this).index() * 1 - 2) + ') a').addClass('active');
           $('#digitroup-menu li:nth-child(' + ($(this).index() * 1 - 1) + ') a').removeClass('active');
         }
-      }, {offset: 110});
+      }, {offset: 111});
     });
 
 

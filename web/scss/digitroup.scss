@@ -79,9 +79,9 @@ body > header {
 
 /*SECTION STUFF*/
 section{
-  min-height: 250px;
+  min-height: 10px;
   padding: 40px 0;
 }
 .digitroup-bg-gray{
-  background: $digitroup-color-secundary;
+  background: lighten($digitroup-color-secundary,40);
 }
