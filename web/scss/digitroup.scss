@@ -2,12 +2,18 @@
     Created on : 26-Jun-2015, 11:20:10 PM
     Author     : Rene Roberto Ramirez Szabo <rene.szabo@gmail.com>
 */
+
+$digitroup-color-primary: #f88e21;    //ORANGE
+$digitroup-color-secundary: #676268;  //GRAY
+
 html,body{
   height: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
 }
 body > header {
   .digitroup-navbar-default{
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.3);
     border:none;
   }
   .navbar-header{
@@ -26,14 +32,56 @@ body > header {
   }
   #digitroup-menu{
     margin-top: 30px;
+    font-weight: 600;
     a {
       color: white;
       margin-left: 10px;
       border: 1px transparent solid;
+      border-radius: 5px;
       &:hover{
         border: 1px white solid;
-        border-radius: 5px;
+      }
+      &.active{
+        color: $digitroup-color-primary;
+        border: 1px $digitroup-color-primary solid;
       }
     }
   }
+}
+/*TEXT STUFF*/
+.digitroup-h1-pacifico{
+  font-family: 'Pacifico', sans-serif;
+}
+.digitroup-title{
+  font-size: 75px;
+  line-height: 75px;
+}
+.digitroup-subtitle{
+  font-size: 32px;
+  line-height: 32px;
+}
+.digitroup-subtitle-2{
+  font-size: 23px;
+  line-height: 23px;
+}
+
+.digitroup-font-bold{
+  font-weight: 600;
+}
+
+.digitroup-font-color-primary{
+  color: darken($digitroup-color-primary,10);
+}
+.digitroup-font-shadow{
+  -webkit-text-shadow: 1px 1px 1px #000;
+  text-shadow: 1px 1px 1px #000;
+}
+
+/*SECTION STUFF*/
+section{
+  min-height: 250px;
+  padding: 40px 0;
+}
+.digitroup-bg-gray{
+  background: $digitroup-color-secundary;
 }
